@@ -1,0 +1,41 @@
+{
+  "name": "ngx-simple-phone-input",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "8.x - 15.x",
+		"@angular/core": "8.x - 15.x",
+		"@angular/forms": "8.x - 15.x",
+    "google-libphonenumber": "^3.2.3",
+    "rxjs": "^7.8.0"
+  },
+  "repository": {
+		"type": "git",
+		"url": "git+https://github.com/osamagamal65/ngx-simple-phone-input"
+	},
+	"author": {
+		"name": "Osama Gamal",
+		"email": "ogamalii65@gmail.com"
+	},
+  "devDependencies": {
+    "@angular/common": "^14.0.0",
+    "@angular/core": "^14.0.0",
+    "@types/google-libphonenumber": "^7.4.23",
+    "rxjs": "^7.8.0"
+  },
+  "keywords": [
+		"angular",
+		"ng8",
+		"ng9",
+		"ng10",
+		"angular 8",
+		"angular 9",
+		"angular 10",
+		"angular 11",
+		"angular 12",
+		"angular 13",
+    	"angular 14",
+		"intl-tel-input",
+		"phone number",
+		"validation"
+	]
+}

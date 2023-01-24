@@ -1,4 +1,4 @@
-import { CountryISO } from './../enums/country-iso.enum';
+import { CountryISO } from '../enums/country-iso.enum';
 export interface Country {
   name:     string;
   localName: string;

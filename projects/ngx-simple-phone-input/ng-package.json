@@ -1,6 +1,6 @@
 {
   "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
-  "dest": "../../dist/ngx-phone-input",
+  "dest": "../../dist/ngx-simple-phone-input",
   "lib": {
     "entryFile": "src/public-api.ts"
   }

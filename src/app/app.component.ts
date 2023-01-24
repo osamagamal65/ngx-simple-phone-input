@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ngx-simple-phone-input';
+
+  onChange(value: string) {
+    console.log('value',value);
+  }
 }

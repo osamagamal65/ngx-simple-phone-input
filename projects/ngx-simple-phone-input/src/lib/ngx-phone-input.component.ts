@@ -1,4 +1,4 @@
-import { Country } from './../models/country';
+import { Country } from '../models/country';
 import * as lpn from 'google-libphonenumber';
 
 import {
@@ -16,12 +16,12 @@ import {
 import { countries } from '../data/countries';
 
 @Component({
-  selector: 'lib-ngx-phone-input',
+  selector: 'ngx-simple-phone-input',
   templateUrl: "./ngx-phone-input.component.html",
   styleUrls: ["./ngx-phone-input.component.scss"]
 })
 export class NgxPhoneInputComponent implements OnInit {
-  @Input() value: string | undefined = '';
+  	@Input() value: string | undefined = '';
 	@Input() preferredCountries: Array<string> = [];
 	@Input() enablePlaceholder = true;
 	@Input() customPlaceholder?: string;
@@ -33,11 +33,12 @@ export class NgxPhoneInputComponent implements OnInit {
 	@Input() selectFirstCountry = true;
 	@Input() selectedCountryISO?: string;
 	@Input() phoneValidation = true;
-  @Input() disabled = false;
+  	@Input() disabled = false;
 	@Input() inputId = 'phone';
 
 
 	@Output() readonly countryChange = new EventEmitter<Country>();
+	@Output() readonly valueChange = new EventEmitter<string>();
 
   allCountries: Country[] = countries;
   isOpen: boolean = false;
@@ -77,7 +78,7 @@ export class NgxPhoneInputComponent implements OnInit {
 	public onCountrySelect(country: Country, el: HTMLInputElement): void {
 
 		this.setSelectedCountry(country);
-    this.isOpen = false;
+    	this.isOpen = false;
 
 		if (this.phoneNumber && this.phoneNumber.length > 0) {
 			this.value = this.phoneNumber;
@@ -162,6 +163,7 @@ export class NgxPhoneInputComponent implements OnInit {
 					.find((c) => c.code === countryCode || c.dialCode === countryCode);
 				if (newCountry) {
 					this.selectedCountry = newCountry;
+          this.countryChange.emit(this.selectedCountry);
 				}
 			}
 		}
@@ -172,7 +174,7 @@ export class NgxPhoneInputComponent implements OnInit {
 			// Reason: avoid https://stackoverflow.com/a/54358133/1617590
 			// tslint:disable-next-line: no-null-keyword
 			// @ts-ignore
-      this.propagateChange(null);
+        this.propagateChange(null);
 		} else {
 			const intlNo = number
 				? this.phoneUtil.format(number, lpn.PhoneNumberFormat.INTERNATIONAL)
@@ -190,6 +192,7 @@ export class NgxPhoneInputComponent implements OnInit {
 				dialCode: '+' + this.selectedCountry.dialCode,
 			});
       this.phoneNumber = intlNo;
+			this.valueChange.emit(intlNo);
 		}
 	}
 
@@ -207,7 +210,7 @@ export class NgxPhoneInputComponent implements OnInit {
 
 
 
-  /**
+  	/**
 	 * Search country based on country name, code, dialCode or all of them.
 	 */
 	public searchCountry() {}

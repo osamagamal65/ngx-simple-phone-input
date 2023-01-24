@@ -1,5 +1,5 @@
 import { CountryISO } from '../enums/country-iso.enum';
-import { Country } from './../models/country';
+import { Country } from '../models/country';
 export const countries: Country[] = [
   {
     name: 'Afghanistan',

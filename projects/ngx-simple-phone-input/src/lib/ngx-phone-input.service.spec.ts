@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { NgxPhoneInputService } from './ngx-phone-input.service';
+import { NgxPhoneInputService } from './ngx-simple-phone-input.service';
 
 describe('NgxPhoneInputService', () => {
   let service: NgxPhoneInputService;

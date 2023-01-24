@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NgxPhoneInputComponent } from './ngx-phone-input.component';
+import { NgxPhoneInputComponent } from './ngx-simple-phone-input.component';
 
 describe('NgxPhoneInputComponent', () => {
   let component: NgxPhoneInputComponent;

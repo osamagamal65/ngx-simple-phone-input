@@ -1,4 +1,4 @@
-import { NgxPhoneInputModule } from './../../projects/ngx-phone-input/src/lib/ngx-phone-input.module';
+import { NgxPhoneInputModule } from '../../projects/ngx-simple-phone-input/src/lib/ngx-phone-input.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
