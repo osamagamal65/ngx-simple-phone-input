@@ -1,0 +1,112 @@
+*{
+  font-size: 16px;
+  color: #606D80;
+}
+.phone-input-container{
+  position: relative;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  background-color: #FAFCFF;
+  padding: px 8px;
+  height: 34px;
+  width: 365px;
+  border: 1px solid #D4E5FF;
+  z-index: 1;
+  select{
+    display: none;
+  }
+  input{
+    border: none;
+    outline: none;
+    border: none;
+    background-color: #FAFCFF;
+    width: 100%;
+    height: 100%;
+  }
+
+  .option-list{
+    height: 34px;
+    width: 56px;
+    overflow: hidden;
+    list-style: none;
+    padding: 4px 8px;
+    background-color: #F6F8FC;
+    position: absolute;
+    left: 0px;
+    top: -16px;
+    display: none;
+    transition: 300ms all ease-in-out;
+      &.opened {
+        height: 365px;
+        width: 365px;
+        max-height: 34px * 20;
+        overflow-y: scroll;
+        display: block;
+      }
+
+
+  }
+}
+.selected-country{
+  width:56px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  justify-content: flex-start;
+  background-color: #F6F8FC;
+  img{
+    width: 24px;
+    height: 16px;
+    padding-right: 8px;
+
+  }
+  .flag-emoji{
+    font-size: 32px;
+    padding-right: 8px;
+
+  }
+}
+
+.option-item {
+  height: 34px;
+  width: 365px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  justify-content: flex-start;
+  &:hover{
+    background-color: white;
+  }
+  img{
+    width: 24px;
+    height: 16px;
+    padding-right: 8px;
+
+  }
+  .flag-emoji{
+    font-size: 32px;
+    padding-right: 8px;
+
+  }
+  .dial-code {
+    font-size: 14px;
+    font-weight: 700;
+    width: 40px;
+  }
+  .country-name {
+    padding-left: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    padding-left: 8px;
+  }
+}
+.backdrop-overlay{
+  position: fixed;
+  left:0px;
+  right:0px;
+  top:0px;
+  bottom:0px;
+
+}
