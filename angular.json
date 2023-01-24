@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "intl-phone-input": {
+    "ngx-simple-phone-input": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/intl-phone-input",
+            "outputPath": "dist/ngx-simple-phone-input",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -70,10 +70,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "intl-phone-input:build:production"
+              "browserTarget": "ngx-simple-phone-input:build:production"
             },
             "development": {
-              "browserTarget": "intl-phone-input:build:development"
+              "browserTarget": "ngx-simple-phone-input:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -81,7 +81,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "intl-phone-input:build"
+            "browserTarget": "ngx-simple-phone-input:build"
           }
         },
         "test": {

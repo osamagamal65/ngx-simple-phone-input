@@ -25,7 +25,7 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, './coverage/intl-phone-input'),
+      dir: require('path').join(__dirname, './coverage/ngx-simple-phone-input'),
       subdir: '.',
       reporters: [
         { type: 'html' },

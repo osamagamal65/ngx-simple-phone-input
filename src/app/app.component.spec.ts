@@ -16,16 +16,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'intl-phone-input'`, () => {
+  it(`should have as title 'ngx-simple-phone-input'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('intl-phone-input');
+    expect(app.title).toEqual('ngx-simple-phone-input');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('intl-phone-input app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('ngx-simple-phone-input app is running!');
   });
 });
