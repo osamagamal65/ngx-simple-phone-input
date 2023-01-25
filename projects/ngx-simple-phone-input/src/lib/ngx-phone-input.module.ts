@@ -17,7 +17,8 @@ import { NgxPhoneInputComponent } from './ngx-phone-input.component';
     FormsModule
   ],
   exports: [
-    NgxPhoneInputComponent
+    NgxPhoneInputComponent,
+    ImageFallbackDirective
   ]
 })
 export class NgxPhoneInputModule { }

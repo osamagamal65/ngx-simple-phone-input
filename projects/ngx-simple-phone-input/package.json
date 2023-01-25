@@ -1,6 +1,6 @@
 {
   "name": "ngx-simple-phone-input",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "peerDependencies": {
     "@angular/common": "8.x - 14.x",
 		"@angular/core": "8.x - 14.x",

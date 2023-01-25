@@ -21,7 +21,7 @@ import { countries } from '../data/countries';
   styleUrls: ["./ngx-phone-input.component.scss"]
 })
 export class NgxPhoneInputComponent implements OnInit {
-  	@Input() value: string | undefined = '';
+  @Input() value: string | undefined = '';
 	@Input() preferredCountries: Array<string> = [];
 	@Input() enablePlaceholder = true;
 	@Input() customPlaceholder?: string;
@@ -33,12 +33,12 @@ export class NgxPhoneInputComponent implements OnInit {
 	@Input() selectFirstCountry = true;
 	@Input() selectedCountryISO?: string;
 	@Input() phoneValidation = true;
-  	@Input() disabled = false;
+  @Input() disabled = false;
 	@Input() inputId = 'phone';
 
 
-	@Output() readonly countryChange = new EventEmitter<Country>();
-	@Output() readonly valueChange = new EventEmitter<string>();
+	@Output() readonly countryChange: EventEmitter<Country> = new EventEmitter<Country>();
+	@Output() readonly valueChange: EventEmitter<string> = new EventEmitter<string>();
 
   allCountries: Country[] = countries;
   isOpen: boolean = false;
@@ -210,7 +210,7 @@ export class NgxPhoneInputComponent implements OnInit {
 
 
 
-  	/**
+  /**
 	 * Search country based on country name, code, dialCode or all of them.
 	 */
 	public searchCountry() {}
